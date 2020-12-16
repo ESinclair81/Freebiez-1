@@ -1,27 +1,31 @@
 // require express router
 const router = require("express").Router();
 
-// require multer
-const multer = require("multer");
-const upload = multer({
-    destination: 'post_images/'
-});
+// require multer uploader
+const uploader = require("../../utils/upload");
+
+// // require multer
+// const multer = require("multer");
+// const upload = multer({
+//     storage: uploader.storage,
+//     // dest: '../public/post_images/'
+// });
 
 // require fs
 const fs = require("fs");
 
 // require models
-const { Post, Comment, User } = require("../../models/");
+const { Post, Comment, User, Image } = require("../../models/");
 
 // require withAuth function
 const withAuth = require("../../utils/auth");
 
 // POST '/' create Post
-router.post("/", withAuth, upload.single('file'), function (req, res) {
+router.post("/", withAuth, uploader.single('post-image'), function (req, res) {
     console.log(req);
-    const data = fs.readFileSync(req.file.path);
+    // const data = fs.readFileSync("post_images/" + req.file.filename);
     Image.create({
-        post_image: data
+        data: fs.readFileSync("post_images/" + req.file.filename)
     })
         .then(image => {
             res.json({ success: true, file1: req.file, data: image, update: false });
