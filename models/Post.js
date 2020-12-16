@@ -21,10 +21,6 @@ Post.init(
                 length: [10]
             }
         },
-        image: {
-            type: DataTypes.BLOB,
-            allowNull: false,
-        },
         body: {
             type: DataTypes.STRING,
             allowNull: false,

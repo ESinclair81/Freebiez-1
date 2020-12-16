@@ -6,6 +6,7 @@ const editFormHandler = async function (event) {
 
     // get form values for POST to endpoint
     const title = document.querySelector('input[name="post-title"]').value;
+    const image = document.querySelector('input[name="post-image"]').files;
     const body = document.querySelector('input[name="post-body"]').value;
 
     // send update request to endpoint
@@ -13,6 +14,7 @@ const editFormHandler = async function (event) {
         method: 'PUT',
         body: JSON.stringify({
             title,
+            image,
             body
         }),
         headers: {
