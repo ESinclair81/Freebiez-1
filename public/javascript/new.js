@@ -18,8 +18,6 @@ const newFormHandler = async function (event) {
         body: formData,
         headers: {
             authorization: `Bearer ${token}`,
-            // 'Content-Type':
-            //     'multipart/form-data; boundary=----WebKitFormBoundarylKRlagDQDch6f3w6',
             accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
         }
     });

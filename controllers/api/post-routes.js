@@ -22,20 +22,16 @@ router.post("/", withAuth, uploader.single('file'), function (req, res) {
     Post.create({ ...body, userId: req.session.userId })
         .then(newPost => {
             res.json(newPost);
+            Image.create({
+                data: fs.readFileSync("post_images/" + req.file.filename),
+                name: req.file.originalname,
+                type: req.file.mimetype,
+                postId: newPost.id
+            })
         })
         .catch(err => {
             res.status(500).json(err);
         })
-
-    Image.create({
-        data: fs.readFileSync("post_images/" + req.file.filename),
-        name: req.file.originalname,
-        type: req.file.mimetype
-    })
-    // .then(image => {
-    //     res.json({ success: true, file1: req.file, data: image, update: false });
-    // });
-
 });
 
 // PUT '/:id' update Post by ID
