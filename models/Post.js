@@ -18,10 +18,10 @@ Post.init(
             type: DataTypes.STRING,
             allowNull: false,
             validate: {
-                length: [10]
+                len: [10]
             }
         },
-        body: {
+        text: {
             type: DataTypes.STRING,
             allowNull: false,
         }

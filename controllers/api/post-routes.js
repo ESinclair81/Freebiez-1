@@ -4,13 +4,6 @@ const router = require("express").Router();
 // require multer uploader
 const uploader = require("../../utils/upload");
 
-// // require multer
-// const multer = require("multer");
-// const upload = multer({
-//     storage: uploader.storage,
-//     // dest: '../public/post_images/'
-// });
-
 // require fs
 const fs = require("fs");
 
@@ -21,26 +14,29 @@ const { Post, Comment, User, Image } = require("../../models/");
 const withAuth = require("../../utils/auth");
 
 // POST '/' create Post
-router.post("/", withAuth, uploader.single('post-image'), function (req, res) {
-    console.log(req);
-    // const data = fs.readFileSync("post_images/" + req.file.filename);
-    Image.create({
-        data: fs.readFileSync("post_images/" + req.file.filename)
-    })
-        .then(image => {
-            res.json({ success: true, file1: req.file, data: image, update: false });
-        })
-        .then(() => {
-            const body = req.body;
+router.post("/", withAuth, uploader.single('file'), function (req, res) {
+    // console.log(req);
 
-            Post.create({ ...body, userId: req.session.userId })
-                .then(newPost => {
-                    res.json(newPost);
-                })
-                .catch(err => {
-                    res.status(500).json(err);
-                });
+    Image.create({
+        data: fs.readFileSync("post_images/" + req.file.filename),
+        name: req.file.originalname,
+        type: req.file.mimetype
+    })
+        // .then(image => {
+        //     res.json({ success: true, file1: req.file, data: image, update: false });
+        // });
+
+    const body = req.body;
+    console.log(req.body.title, req.body.text, req.session.userId);
+
+    Post.create({ ...body, userId: req.session.userId })
+        .then(newPost => {
+            res.json(newPost);
+        })
+        .catch(err => {
+            res.status(500).json(err);
         });
+
 });
 
 // PUT '/:id' update Post by ID
