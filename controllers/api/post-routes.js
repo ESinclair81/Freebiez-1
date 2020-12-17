@@ -16,18 +16,8 @@ const withAuth = require("../../utils/auth");
 // POST '/' create Post
 router.post("/", withAuth, uploader.single('file'), function (req, res) {
     // console.log(req);
-
-    Image.create({
-        data: fs.readFileSync("post_images/" + req.file.filename),
-        name: req.file.originalname,
-        type: req.file.mimetype
-    })
-        // .then(image => {
-        //     res.json({ success: true, file1: req.file, data: image, update: false });
-        // });
-
     const body = req.body;
-    console.log(req.body.title, req.body.text, req.session.userId);
+    console.log(body);
 
     Post.create({ ...body, userId: req.session.userId })
         .then(newPost => {
@@ -35,7 +25,16 @@ router.post("/", withAuth, uploader.single('file'), function (req, res) {
         })
         .catch(err => {
             res.status(500).json(err);
-        });
+        })
+
+    Image.create({
+        data: fs.readFileSync("post_images/" + req.file.filename),
+        name: req.file.originalname,
+        type: req.file.mimetype
+    })
+    // .then(image => {
+    //     res.json({ success: true, file1: req.file, data: image, update: false });
+    // });
 
 });
 
