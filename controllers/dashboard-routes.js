@@ -29,16 +29,20 @@ router.get("/new", withAuth, (req, res) => {
 });
 
 router.get("/edit/:id", withAuth, (req, res) => {
-    Post.findByPk(req.params.id, { include: [Image] })
+    Post.findByPk(req.params.id, {
+        include: [
+            Image
+        ]
+            
+    })
         .then(dbPostData => {
             if (dbPostData) {
+                console.log(dbPostData);
                 const post = dbPostData.get({ plain: true });
-                const image = 'data:image/png;base64,' + new Buffer(res.data.data.image, 'binary').toString('base64')
-                console.log(image);
+
                 res.render("edit-post", {
                     layout: "dashboard",
-                    post,
-                    image
+                    post
                 });
             } else {
                 res.status(404).end();
