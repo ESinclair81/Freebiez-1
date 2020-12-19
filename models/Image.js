@@ -2,11 +2,11 @@
 const { Sequelize, Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-// declare that Post inherits from the sequlize Model object
-class Post extends Model { }
+// declare that Comment inherits from the sequlize Model object
+class Image extends Model { }
 
-// define structure of Post
-Post.init(
+// define structure of Comment
+Image.init(
     {
         id: {
             type: DataTypes.INTEGER,
@@ -14,16 +14,14 @@ Post.init(
             primaryKey: true,
             autoIncrement: true,
         },
-        title: {
+        type: {
             type: DataTypes.STRING,
-            allowNull: false,
-            validate: {
-                len: [10]
-            }
         },
-        text: {
+        name: {
             type: DataTypes.STRING,
-            allowNull: false,
+        },
+        data: {
+            type: DataTypes.BLOB("long")
         }
     },
     {
@@ -32,4 +30,4 @@ Post.init(
 );
 
 
-module.exports = Post;
+module.exports = Image;

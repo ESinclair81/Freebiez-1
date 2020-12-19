@@ -3,19 +3,22 @@ const newFormHandler = async function (event) {
     event.preventDefault();
 
     // get form values for POST to endpoint
-    const title = document.querySelector('input[name="post-title"]').value;
-    const body = document.querySelector('textarea[name="post-body"]').value;
-
+    const title = document.querySelector("#post-title").value;
+    const file = document.querySelector("#post-image").files[0];
+    const text = document.querySelector("#post-text").value;
     const token = localStorage.getItem("token");
+    
+    const formData = new FormData()
+    formData.append('file', file);
+    formData.append('text', text);
+    formData.append('title', title);
+
     await fetch(`/api/post`, {
         method: "POST",
-        body: JSON.stringify({
-            title,
-            body
-        }),
+        body: formData,
         headers: {
-            "Content-Type": "application/json",
-            authorization: `Bearer ${token}`
+            authorization: `Bearer ${token}`,
+            accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
         }
     });
 
