@@ -1,11 +1,6 @@
-<<<<<<< HEAD
-.env
-/node_mo dules
-=======
 package-lock.json
 node_modules
 .DS_Store
 .env
->>>>>>> 47874128fed783f057ca503a211b5c56ae82d9e4
 node_modules
 
