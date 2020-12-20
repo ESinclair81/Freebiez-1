@@ -6,6 +6,9 @@
                 Post written by: {{post.User.username}} - {{format_date post.createdAt}}
             </div>
         </div>
+        <div>
+            <img src="{{post.imageURL}}" id="post-image" >
+        </div>
         <div class="card-body">
             {{post.body}}
         </div>
@@ -38,11 +41,11 @@
         </div>
 
         <div class="card-body">
-            <input type="hidden" name="post-id" value="{{post.id}}" />
+            <input type="hidden" id="post-id" name="post-id" value="{{post.id}}" />
 
             {{!-- <label class="form-label" for="comment-body">Comment</label> --}}
 
-            <textarea name="comment-body" class="form-input"></textarea>
+            <textarea id="comment-text" name="comment-body" class="form-input"></textarea>
 
             <button type="submit" class="btn">Submit</button>
         </div>

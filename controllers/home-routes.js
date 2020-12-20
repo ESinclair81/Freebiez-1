@@ -1,15 +1,20 @@
 const router = require("express").Router();
-const { Post, Comment, User } = require("../models/");
+const { Post, Comment, User, Image } = require("../models/");
 
 // GET route for all posts
 router.get("/", (req, res) => {
     Post.findAll({
         include: [
-            User
+            User,
+            Image
         ],
     })
         .then((dbPostData) => {
             const posts = dbPostData.map((post) => post.get({ plain: true }));
+            posts.forEach((post) => {
+                post.imageURL = 'data:image/jpg;base64,' + Buffer.from(post.Image.data, 'binary').toString('base64');
+            });
+                // post.imageURL = 'data:image/jpg;base64,' + Buffer.from(imageData, 'binary').toString('base64')
 
             res.render("all-posts", { posts });
         })
@@ -22,6 +27,7 @@ router.get("/", (req, res) => {
 router.get("/post/:id", (req, res) => {
     Post.findByPk(req.params.id, {
         include: [
+            Image,
             User,
             {
                 model: Comment,
@@ -34,7 +40,8 @@ router.get("/post/:id", (req, res) => {
         .then((dbPostData) => {
             if (dbPostData) {
                 const post = dbPostData.get({ plain: true });
-
+                const imageData = post.Image.data;
+                post.imageURL = 'data:image/jpg;base64,' + Buffer.from(imageData, 'binary').toString('base64');
                 res.render("single-post", { post });
             } else {
                 res.status(404).end();
@@ -64,5 +71,6 @@ router.get("/signup", (req, res) => {
 
     res.render("signup");
 });
+
 
 module.exports = router;

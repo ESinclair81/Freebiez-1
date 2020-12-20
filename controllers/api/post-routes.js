@@ -15,9 +15,8 @@ const withAuth = require("../../utils/auth");
 
 // POST '/' create Post
 router.post("/", withAuth, uploader.single('file'), function (req, res) {
-    // console.log(req);
     const body = req.body;
-    console.log(body);
+    console.log(req.body);
 
     Post.create({ ...body, userId: req.session.userId })
         .then(newPost => {
@@ -27,6 +26,9 @@ router.post("/", withAuth, uploader.single('file'), function (req, res) {
                 name: req.file.originalname,
                 type: req.file.mimetype,
                 postId: newPost.id
+            })
+            .then(storedImage => {
+                fs.unlinkSync(`post_images/${req.file.filename}`)
             })
         })
         .catch(err => {
