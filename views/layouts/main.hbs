@@ -3,10 +3,10 @@
 
 <head>
     <meta charset="UTF-8">
-    {{!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> --}}
+    {{!--
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> --}}
     {{!-- TEMPLATE TINGZ --}}
-     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-      <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 
     <title>Freebiez - Give It Away Now</title>
@@ -15,37 +15,45 @@
     <link rel="shortcut icon" type="image/png" href="../../public/images/favicon-Bee-Social.png">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
-{{!_______________________________________________________ These are the Google Fonts ____________________________________________________}}
-<link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Expletus+Sans:ital,wght@0,400;1,400;1,600;1,700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
-    {{!-- <link rel="stylesheet" type="text/css" href="/stylesheets/style.css"> --}}
+    {{!_______________________________________________________ These are the Google Fonts
+    ____________________________________________________}}
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Expletus+Sans:ital,wght@0,400;1,400;1,600;1,700&family=Merriweather:wght@400;700&display=swap"
+        rel="stylesheet">
+    {{!--
+    <link rel="stylesheet" type="text/css" href="/stylesheets/style.css"> --}}
     <link rel="stylesheet" type="text/css" href="/stylesheets/style2.css">
 
 </head>
 
 <body>
 
-{{!_____________________________________________________This Is the Auto Music on Load ___________________________________________________!}}
+    {{!_____________________________________________________This Is the Auto Music on Load
+    ___________________________________________________!}}
 
-  <audio src="/Give_It_Away_Now_Instrumental.mp3" autoplay>
-<p>If you are reading this, it is because your browser does not support the audio element.</p>
-<embed src="/Give_It_Away_Now_Instrumental.mp3" width="180" height="90" hidden="true" />
-</audio>
+    <audio src="/Give_It_Away_Now_Instrumental.mp3" autoplay>
+        <p>If you are reading this, it is because your browser does not support the audio element.</p>
+        <embed src="/Give_It_Away_Now_Instrumental.mp3" width="180" height="90" hidden="true" />
+    </audio>
 
-{{!-- <embed src="/Give_It_Away_Now_Instrumental.mp3" width="180" height="90" loop="false" autostart="false" hidden="true" /> --}}
+    {{!-- <embed src="/Give_It_Away_Now_Instrumental.mp3" width="180" height="90" loop="false" autostart="false"
+        hidden="true" /> --}}
 
     <nav class="navbar navbar-expand-md">
         <h3 id="logo">Freebiez</h3>
-        <h5 id="logo2">Give it away, give it away, give it away NOW</h5> 
+        <h5 id="logo2">Give it away, give it away, give it away NOW</h5>
 
-{{!_________________________________________________________ The Animated Bee ___________________________________________________________!}}
-    <div class="bee">
-        <img src="/images/beebody.png" class="bee-body"/> 
-        <img src="/images/beewing-left.png" class="bee-wing-left"/>    
-        <img src="/images/beewing-right.png" class="bee-wing-right"/>
-    </div>
+        {{!_________________________________________________________ The Animated Bee
+        ___________________________________________________________!}}
+        <div class="bee">
+            <img src="/images/beebody.png" class="bee-body" />
+            <img src="/images/beewing-left.png" class="bee-wing-left" />
+            <img src="/images/beewing-right.png" class="bee-wing-right" />
+        </div>
 
-{{!!__________________________________________________________ This Is the NavBar ______________________________________________________!}}
+        {{!!__________________________________________________________ This Is the NavBar
+        ______________________________________________________!}}
         <ul class="navbar-nav ml-auto">
             <li class="nav-item"><a href="/">Home</a></li>
             <li class="nav-item"><a href="/dashboard">Dashboard</a></li>
@@ -58,14 +66,15 @@
         {{{body}}}
     </main>
 
-{{!_______________________________________________________ This is The Footer  ___________________________________________________________!}}
+    {{!_______________________________________________________ This is The Footer
+    ___________________________________________________________!}}
     <div class="footer">
-    <footer class="flex-row justify-center footer_contents">
-        &copy; Freebiez Inc
-    </footer>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+        <footer class="flex-row justify-center footer_contents">
+            &copy; Freebiez Inc
+        </footer>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 </body>
 
 </html>
