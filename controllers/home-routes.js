@@ -1,15 +1,18 @@
 const router = require("express").Router();
-const { Post, Comment, User } = require("../models/");
+const { Post, Comment, User, Image } = require("../models/");
 
 // GET route for all posts
 router.get("/", (req, res) => {
     Post.findAll({
         include: [
-            User
+            User,
+            Image
         ],
     })
         .then((dbPostData) => {
             const posts = dbPostData.map((post) => post.get({ plain: true }));
+            
+                // post.imageURL = 'data:image/jpg;base64,' + Buffer.from(imageData, 'binary').toString('base64')
 
             res.render("all-posts", { posts });
         })
@@ -64,5 +67,11 @@ router.get("/signup", (req, res) => {
 
     res.render("signup");
 });
+
+
+function imageConvert(data) {
+    const imageURL = 'data:image/jpg;base64,' + Buffer.from(data, 'binary').toString('base64');
+    return imageURL
+}
 
 module.exports = router;

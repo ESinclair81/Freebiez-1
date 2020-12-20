@@ -4,7 +4,7 @@ const newFormHandler = async function (event) {
 
     // get form values for POST to endpoint
     const title = document.querySelector("#post-title").value;
-    const file = document.querySelector("#post-image").files[0];
+    const file = document.querySelector("#post-image-upload").files[0];
     const text = document.querySelector("#post-text").value;
     const token = localStorage.getItem("token");
     
