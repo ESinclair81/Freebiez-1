@@ -3,8 +3,8 @@ const commentFormHandler = async function (event) {
     event.preventDefault();
 
     // get form values for POST to endpoint
-    const postId = document.querySelector('input[name="post-id"]').value;
-    const body = document.querySelector('textarea[name="comment-body"]').value;
+    const postId = document.querySelector('#post-id').value;
+    const body = document.querySelector('#comment-text').value;
 
     // validate that the post content is not empty then send to endpoint
     if (body) {

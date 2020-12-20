@@ -15,9 +15,7 @@ const withAuth = require("../../utils/auth");
 
 // POST '/' create Post
 router.post("/", withAuth, uploader.single('file'), function (req, res) {
-    // console.log(req);
     const body = req.body;
-    console.log(body);
 
     Post.create({ ...body, userId: req.session.userId })
         .then(newPost => {

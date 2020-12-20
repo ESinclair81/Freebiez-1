@@ -39,7 +39,6 @@ router.get("/edit/:id", withAuth, (req, res) => {
             if (dbPostData) {
                 const post = dbPostData.get({ plain: true });
                 const imageData = post.Image.data;
-                console.log(imageData);
                 post.imageURL = 'data:image/jpg;base64,' + Buffer.from(imageData, 'binary').toString('base64')
 
                 res.render("edit-post", {

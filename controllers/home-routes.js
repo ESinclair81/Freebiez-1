@@ -11,7 +11,6 @@ router.get("/", (req, res) => {
     })
         .then((dbPostData) => {
             const posts = dbPostData.map((post) => post.get({ plain: true }));
-            console.log('FIRST POSTS:', posts);
             posts.forEach((post) => {
                 post.imageURL = 'data:image/jpg;base64,' + Buffer.from(post.Image.data, 'binary').toString('base64');
             });
@@ -42,9 +41,8 @@ router.get("/post/:id", (req, res) => {
             if (dbPostData) {
                 const post = dbPostData.get({ plain: true });
                 const imageData = post.Image.data;
-                console.log('This is image for commenting page:',imageData);
-                post.imageURL = 'data:image/jpg;base64,' + Buffer.from(imageData, 'binary').toString('base64')
-
+                post.imageURL = 'data:image/jpg;base64,' + Buffer.from(imageData, 'binary').toString('base64');
+                console.log(post.imageURL);
                 res.render("single-post", { post });
             } else {
                 res.status(404).end();
@@ -75,10 +73,5 @@ router.get("/signup", (req, res) => {
     res.render("signup");
 });
 
-
-function imageConvert(data) {
-    const imageURL = 'data:image/jpg;base64,' + Buffer.from(data, 'binary').toString('base64');
-    return imageURL
-}
 
 module.exports = router;

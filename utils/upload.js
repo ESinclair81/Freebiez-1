@@ -10,7 +10,6 @@ const imageFilter = (req, file, cb) => {
 
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
-        console.log('We in destinaton')
       cb(null, "post_images/");
     },
     filename: (req, file, cb) => {
