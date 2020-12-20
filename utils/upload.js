@@ -7,6 +7,11 @@ const imageFilter = (req, file, cb) => {
     cb("Please upload only images.", false);
   }
 };
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> feature/style
 
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {

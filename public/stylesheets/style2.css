@@ -1,0 +1,305 @@
+#logo {
+    margin-right: 20px;
+    color: rgb(204, 198, 119);
+    font-size: 45px;
+    font-family: 'Expletus Sans', cursive;
+    text-shadow: 2px 2px #000000;
+
+}
+
+#logo2 {
+    margin-right: 20px;
+    margin-top: 14px;
+    color: rgb(204, 198, 119);
+    font-size: 20px;
+    font-family: 'Expletus Sans', cursive;
+
+}
+body {
+    /* font-family: Arial, Helvetica, sans-serif; */
+    font-family: 'Merriweather', serif;
+    background-color:rgb(204, 198, 119);
+    overflow: hidden;
+    width: 100%;
+}
+
+nav {
+    background-color: rgb(151, 148, 133);
+    padding: 50px;
+    height: 100px;
+    margin-bottom: 20px;
+
+}
+
+.nav-item {
+    padding: 10px;
+    color: rgb(237, 241, 250);
+    font-size: 25px;
+    
+}
+
+nav a {
+    padding: 10px;
+    color: rgb(141, 196, 245);
+}
+
+.nav-wrapper {
+    /* padding-right: 20px; */
+}
+
+nav>div>p {
+    display: inline-block;
+    padding-left: 10px;
+    font-size: 30px;
+}
+
+section {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+label {
+    color: rgb(0, 149, 248);
+}
+
+input {
+    color: rgb(109, 109, 109)
+}
+
+.comment {
+    margin-bottom: 20px;
+    margin-left: 15px;
+    padding: 20px;
+    background-color:  rgb(194, 194, 194);
+    border-radius: 10px;
+}
+
+.comment:nth-child(even) {
+    background-color: rgb(228, 225, 225);
+}
+
+h2, h3 {
+    font-size: 20px;
+    color: rgb(141, 196, 245);
+    margin: 30px o;
+    text-align: right;
+    
+}
+
+.list-item {
+    color: rgb(85, 84, 84);
+}
+
+p {
+    margin-bottom: 5px;
+}
+
+
+.btn {
+    /* width: 100%; */
+    margin-top: 7px;
+    margin-bottom: 10px;
+    margin-right: 15px;
+    margin-left: 15px;
+    background-color:rgb(151, 148, 133);
+    border-radius: 10px;
+    color: white;
+    padding: 10px;
+}
+
+.btn2 {
+    /* width: 100%; */
+
+    margin-left: 10px;
+    margin-right: 15px;
+    background-color: rgb(151, 148, 133);
+    border-radius: 10px;
+    color: white;
+    padding: 15px;
+    position:relative;
+    margin-bottom:100%;
+    
+}
+
+.btn:hover {
+    background-color: rgb(197, 196, 118);
+}
+
+.btn:focus {
+    background-color: rgba(12, 105, 128, 1);
+}
+
+.form-label {
+
+margin-right: 12px;
+margin-left: 5px;
+padding: 2px;
+/* margin: auto; */
+
+}
+
+.form-input {
+
+    margin-right: 12px;
+    margin-left: 5px;
+    margin-bottom: 0px;
+    padding: 5px;
+    background-color: white;
+
+}
+
+textarea {
+    width: 300px;
+    height: 75px;
+  }
+
+.column {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex: 1;
+    padding: 0 10px;
+}
+
+.card {
+    border-radius: 10px;
+    margin-bottom: 10px;
+    background-color: lightgrey;
+    
+}
+
+.card-header {
+    border-radius: 5px;
+    margin-bottom: 5px;
+    background-color: rgb(151, 148, 133);
+}
+
+.card-title {
+    font-size: 15px !important;
+    background-color: rgb(141, 196, 245);
+}
+
+.posts a {
+    margin-bottom: 20px;
+    
+}
+
+.post a:nth-child(even) {
+    background-color: grey;
+}
+
+.list-group a {
+    margin-left: 10px;
+    padding: 10px;
+}
+
+.list-group a:nth-child(even) {
+    background-color: rgb(218, 218, 218);
+
+
+}
+
+/*________________________________________________________ This is the Footer ____________________________________________________________  
+
+footer {
+    background-color :black;
+    width: 100%;
+    margin-top: 10px;
+    padding: 15px 35px;
+    color: rgb(237, 244, 250);
+}
+
+footer a {
+    color: rgb(237, 244, 250);
+} */
+
+footer {
+
+    height:80px; 
+    width: 100%;
+    background-image: none;
+    background-repeat: repeat;
+    background-attachment: scroll;
+    background-position: 0% 0%;
+    position: fixed;
+    bottom: 0pt;
+    left: 0pt;
+    background-color: rgb(224, 208, 125);
+    color: rgb(151, 148, 133);
+    font-family: 'Expletus Sans', cursive;
+
+}   
+
+.footer_contents {
+
+    height: 50p x; 
+    width: 100%; /* Visible width of footer */
+    padding: 7px;
+    margin:auto;
+    font-family: 'Expletus Sans', cursive;
+    font-size: 15px;
+
+}
+
+
+/*_______________________________________________________________ The Bee ________________________________________________________________*/
+
+.bee{
+	margin-top:100px;
+	position:relative;
+	animation: ani-bee 10s ease infinite;
+	transform-origin: 0% 0%;
+}
+
+.bee-wing-left,.bee-wing-right,.bee-body{
+	position:absolute;
+}
+
+.bee-wing-left{
+	top:20px;
+	left:-5px;
+	transform-origin: 50% 0%;
+	animation: ani-left-wing 1s ease infinite;
+}
+
+.bee-wing-right{
+	top:20px;
+	left:15px;
+	transform-origin: 50% 0%;
+	animation: ani-right-wing 1s ease infinite;
+}
+
+@keyframes ani-left-wing {
+ 0% {transform: rotate(10deg);}
+ 90% {transform: rotate(0deg);}
+ 100% {transform: rotate(10deg);}
+}
+
+@keyframes ani-right-wing {
+ 0% {transform: rotate(-10deg);}
+ 90% {transform: rotate(0deg);}
+ 100% {transform: rotate(-10deg);}
+}
+
+@keyframes ani-bee {
+	0%{ left:50px;transform: rotate(30deg);}
+	50% {left:300px;transform: rotate(-360deg);}
+	100% {left:50px;transform: rotate(30deg);}
+}
+
+/*___________________________________________________________ Media Queries _______________________________________________________________*/
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {...}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {...}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {...}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {...}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {...}
