@@ -19,6 +19,8 @@ body {
     /* font-family: Arial, Helvetica, sans-serif; */
     font-family: 'Merriweather', serif;
     background-color:yellow;
+    overflow: hidden;
+    width: 100%;
 }
 
 nav {
@@ -150,46 +152,6 @@ textarea {
     height: 75px;
   }
 
-/* footer {
-    background-color :black;
-    width: 100%;
-    margin-top: 10px;
-    padding: 15px 35px;
-    color: rgb(237, 244, 250);
-}
-
-footer a {
-    color: rgb(237, 244, 250);
-} */
-
-footer {
-
-    height:150px; 
-    width: 100%;
-    background-image: none;
-    background-repeat: repeat;
-    background-attachment: scroll;
-    background-position: 0% 0%;
-    position: fixed;
-    bottom: 0pt;
-    left: 0pt;
-    background-color: black;
-    color: yellow;
-    font-family: 'Expletus Sans', cursive;
-
-}   
-
-.footer_contents {
-
-    height: 75px; 
-    width: 100%; /* Visible width of footer */
-    padding: 7px;
-    margin:auto;
-    font-family: 'Expletus Sans', cursive;
-    font-size: 15px;
-
-}
-
 .column {
     display: flex;
     flex-direction: row;
@@ -233,4 +195,94 @@ footer {
 
 .list-group a:nth-child(even) {
     background-color: rgb(218, 218, 218);
+
+
+}
+
+/*________________________________________________________ This is the Footer ____________________________________________________________  
+
+footer {
+    background-color :black;
+    width: 100%;
+    margin-top: 10px;
+    padding: 15px 35px;
+    color: rgb(237, 244, 250);
+}
+
+footer a {
+    color: rgb(237, 244, 250);
+} */
+
+footer {
+
+    height:150px; 
+    width: 100%;
+    background-image: none;
+    background-repeat: repeat;
+    background-attachment: scroll;
+    background-position: 0% 0%;
+    position: fixed;
+    bottom: 0pt;
+    left: 0pt;
+    background-color: black;
+    color: yellow;
+    font-family: 'Expletus Sans', cursive;
+
+}   
+
+.footer_contents {
+
+    height: 75px; 
+    width: 100%; /* Visible width of footer */
+    padding: 7px;
+    margin:auto;
+    font-family: 'Expletus Sans', cursive;
+    font-size: 15px;
+
+}
+
+
+/*_______________________________________________________________ The Bee ________________________________________________________________*/
+
+.bee{
+	margin-top:100px;
+	position:relative;
+	animation: ani-bee 10s ease infinite;
+	transform-origin: 0% 0%;
+}
+
+.bee-wing-left,.bee-wing-right,.bee-body{
+	position:absolute;
+}
+
+.bee-wing-left{
+	top:20px;
+	left:-5px;
+	transform-origin: 50% 0%;
+	animation: ani-left-wing 1s ease infinite;
+}
+
+.bee-wing-right{
+	top:20px;
+	left:15px;
+	transform-origin: 50% 0%;
+	animation: ani-right-wing 1s ease infinite;
+}
+
+@keyframes ani-left-wing {
+ 0% {transform: rotate(10deg);}
+ 90% {transform: rotate(0deg);}
+ 100% {transform: rotate(10deg);}
+}
+
+@keyframes ani-right-wing {
+ 0% {transform: rotate(-10deg);}
+ 90% {transform: rotate(0deg);}
+ 100% {transform: rotate(-10deg);}
+}
+
+@keyframes ani-bee {
+	0%{ left:50px;transform: rotate(30deg);}
+	50% {left:300px;transform: rotate(-360deg);}
+	100% {left:50px;transform: rotate(30deg);}
 }
