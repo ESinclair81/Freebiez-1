@@ -42,7 +42,6 @@ router.get("/post/:id", (req, res) => {
                 const post = dbPostData.get({ plain: true });
                 const imageData = post.Image.data;
                 post.imageURL = 'data:image/jpg;base64,' + Buffer.from(imageData, 'binary').toString('base64');
-                console.log(post.imageURL);
                 res.render("single-post", { post });
             } else {
                 res.status(404).end();
