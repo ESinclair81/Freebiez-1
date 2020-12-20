@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { Post, Image } = require("../models/");
+const { Post, Image, User } = require("../models/");
 const withAuth = require("../utils/auth");
 
 router.get("/", withAuth, (req, res) => {
@@ -31,14 +31,16 @@ router.get("/new", withAuth, (req, res) => {
 router.get("/edit/:id", withAuth, (req, res) => {
     Post.findByPk(req.params.id, {
         include: [
-            Image
+            Image            
         ]
             
     })
         .then(dbPostData => {
             if (dbPostData) {
-                console.log(dbPostData);
                 const post = dbPostData.get({ plain: true });
+                const imageData = post.Image.data;
+                console.log(imageData);
+                post.imageURL = 'data:image/jpg;base64,' + Buffer.from(imageData, 'binary').toString('base64')
 
                 res.render("edit-post", {
                     layout: "dashboard",
@@ -52,5 +54,6 @@ router.get("/edit/:id", withAuth, (req, res) => {
             res.status(500).json(err);
         });
 });
+
 
 module.exports = router;

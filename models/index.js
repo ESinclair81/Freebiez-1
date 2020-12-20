@@ -17,10 +17,10 @@ Comment.belongsTo(User, {
     onDelete: 'CASCADE'
 });
 
-Image.belongsTo(Post, {
+Post.hasOne (Image, {
     foreignKey: 'postId',
     onDelete: 'CASCADE'
-});
+})
 
 
 module.exports = {
