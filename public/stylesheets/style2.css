@@ -168,6 +168,13 @@ textarea {
     
 }
 
+.card-body {
+    border-radius: 10px;
+    margin-bottom: 10px;
+    background-color: lightgrey;
+    
+}
+
 .card-header {
     border-radius: 5px;
     margin-bottom: 5px;
