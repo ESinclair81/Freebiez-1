@@ -7,22 +7,27 @@ const newFormHandler = async function (event) {
     const file = document.querySelector("#post-image-upload").files[0];
     const text = document.querySelector("#post-text").value;
     const token = localStorage.getItem("token");
-    
-    const formData = new FormData()
-    formData.append('file', file);
-    formData.append('text', text);
-    formData.append('title', title);
 
-    await fetch(`/api/post`, {
-        method: "POST",
-        body: formData,
-        headers: {
-            authorization: `Bearer ${token}`,
-            accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
-        }
-    });
+    if (!file) {
+        alert('Must upload an image!')
+    }
+    else {
+        const formData = new FormData()
+        formData.append('file', file);
+        formData.append('text', text);
+        formData.append('title', title);
 
-    document.location.replace("/dashboard");
+        await fetch(`/api/post`, {
+            method: "POST",
+            body: formData,
+            headers: {
+                authorization: `Bearer ${token}`,
+                accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+            }
+        });
+
+        document.location.replace("/dashboard");
+    }
 };
 
 document.querySelector("#new-post-form").addEventListener("submit", newFormHandler);
