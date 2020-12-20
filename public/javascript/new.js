@@ -8,11 +8,14 @@ const newFormHandler = async function (event) {
     const text = document.querySelector("#post-text").value;
     const token = localStorage.getItem("token");
 
-    if (!file) {
+    if (title.length < 10) {
+        alert('Title of post must be longer than 10 characters')
+    }
+    else if (!file) {
         alert('Must upload an image!')
     }
-    else if (title.length < 10) {
-        alert('Title of post must be longer than 10 characters')
+    else if (!text) {
+        alert('Please provide details!')
     }
     else {
         const formData = new FormData()
@@ -31,7 +34,7 @@ const newFormHandler = async function (event) {
 
         document.location.replace("/dashboard");
     }
-        
+
 };
 
 document.querySelector("#new-post-form").addEventListener("submit", newFormHandler);
