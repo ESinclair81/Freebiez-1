@@ -80,7 +80,7 @@ h2, h3 {
     color: rgb(0, 149, 248);
     margin: 30px o;
     text-align: right;
-
+    
 }
 
 .list-item {
@@ -100,6 +100,19 @@ p {
     border-radius: 10px;
     color: black;
     padding: 10px;
+}
+
+.btn2 {
+    /* width: 100%; */
+
+    margin-right: 15px;
+    background-color: black;
+    border-radius: 10px;
+    color: white;
+    padding: 10px;
+    position:relative;
+    margin-bottom:100%;
+    
 }
 
 .btn:hover {
