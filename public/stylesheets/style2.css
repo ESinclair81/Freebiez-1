@@ -1,16 +1,16 @@
 #logo {
     margin-right: 20px;
-    color: yellow;
+    color: rgb(204, 198, 119);
     font-size: 45px;
     font-family: 'Expletus Sans', cursive;
-    text-shadow: 2px 2px #ebe99d;
+    text-shadow: 2px 2px #000000;
 
 }
 
 #logo2 {
     margin-right: 20px;
     margin-top: 14px;
-    color: yellow;
+    color: rgb(204, 198, 119);
     font-size: 20px;
     font-family: 'Expletus Sans', cursive;
 
@@ -18,32 +18,32 @@
 body {
     /* font-family: Arial, Helvetica, sans-serif; */
     font-family: 'Merriweather', serif;
-    background-color:yellow;
+    background-color:rgb(204, 198, 119);
     overflow: hidden;
     width: 100%;
 }
 
 nav {
-    background-color: black;
+    background-color: rgb(151, 148, 133);
     padding: 50px;
     height: 100px;
-    margin-bottom: 20px;
+
 }
 
 .nav-item {
     padding: 10px;
-    color: rgb(237, 244, 250);
+    color: rgb(237, 241, 250);
     font-size: 25px;
     
 }
 
 nav a {
     padding: 10px;
-    color: rgb(237, 244, 250);
+    color: rgb(141, 196, 245);
 }
 
 .nav-wrapper {
-    padding-right: 20px;
+    /* padding-right: 20px; */
 }
 
 nav>div>p {
@@ -79,7 +79,7 @@ input {
 
 h2, h3 {
     font-size: 20px;
-    color: rgb(0, 149, 248);
+    color: rgb(141, 196, 245);
     margin: 30px o;
     text-align: right;
     
@@ -100,9 +100,9 @@ p {
     margin-bottom: 10px;
     margin-right: 15px;
     margin-left: 15px;
-    background-color: yellow;
+    background-color:rgb(151, 148, 133);
     border-radius: 10px;
-    color: black;
+    color: white;
     padding: 10px;
 }
 
@@ -111,7 +111,7 @@ p {
 
     margin-left: 10px;
     margin-right: 15px;
-    background-color: black;
+    background-color: rgb(151, 148, 133);
     border-radius: 10px;
     color: white;
     padding: 15px;
@@ -130,25 +130,25 @@ p {
 
 .form-label {
 
-/* margin-right: 12px;
-margin-left: 12px; */
-padding: 5px;
-margin: auto;
+margin-right: 12px;
+margin-left: 5px;
+padding: 2px;
+/* margin: auto; */
 
 }
 
 .form-input {
 
     margin-right: 12px;
-    margin-left: 12px;
+    margin-left: 5px;
     margin-bottom: 0px;
-    padding: 12px;
+    padding: 5px;
     background-color: white;
 
 }
 
 textarea {
-    width: 500px;
+    width: 300px;
     height: 75px;
   }
 
@@ -161,22 +161,21 @@ textarea {
 }
 
 .card {
-    border-radius: 15px;
-    margin-bottom: 15px;
-    background-color: black;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    background-color: lightgrey;
     
 }
 
 .card-header {
-    border-radius: 12px;
-    margin-bottom: 12px;
-    background-color: lightgrey;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    background-color: rgb(151, 148, 133);
 }
 
 .card-title {
     font-size: 15px !important;
-    background-color: rgba(12, 105, 128, 0.5);
-    background-color:pink;
+    background-color: rgb(141, 196, 245);
 }
 
 .posts a {
@@ -215,7 +214,7 @@ footer a {
 
 footer {
 
-    height:150px; 
+    height:80px; 
     width: 100%;
     background-image: none;
     background-repeat: repeat;
@@ -224,15 +223,15 @@ footer {
     position: fixed;
     bottom: 0pt;
     left: 0pt;
-    background-color: black;
-    color: yellow;
+    background-color: rgb(224, 208, 125);
+    color: rgb(151, 148, 133);
     font-family: 'Expletus Sans', cursive;
 
 }   
 
 .footer_contents {
 
-    height: 75px; 
+    height: 50p x; 
     width: 100%; /* Visible width of footer */
     padding: 7px;
     margin:auto;
@@ -286,3 +285,20 @@ footer {
 	50% {left:300px;transform: rotate(-360deg);}
 	100% {left:50px;transform: rotate(30deg);}
 }
+
+/*___________________________________________________________ Media Queries _______________________________________________________________*/
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {...}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {...}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {...}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {...}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {...}
