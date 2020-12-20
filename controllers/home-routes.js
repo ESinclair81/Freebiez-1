@@ -11,7 +11,10 @@ router.get("/", (req, res) => {
     })
         .then((dbPostData) => {
             const posts = dbPostData.map((post) => post.get({ plain: true }));
-            
+            console.log('FIRST POSTS:', posts);
+            posts.forEach((post) => {
+                post.imageURL = 'data:image/jpg;base64,' + Buffer.from(post.Image.data, 'binary').toString('base64');
+            });
                 // post.imageURL = 'data:image/jpg;base64,' + Buffer.from(imageData, 'binary').toString('base64')
 
             res.render("all-posts", { posts });
@@ -25,6 +28,7 @@ router.get("/", (req, res) => {
 router.get("/post/:id", (req, res) => {
     Post.findByPk(req.params.id, {
         include: [
+            Image,
             User,
             {
                 model: Comment,
@@ -37,6 +41,9 @@ router.get("/post/:id", (req, res) => {
         .then((dbPostData) => {
             if (dbPostData) {
                 const post = dbPostData.get({ plain: true });
+                const imageData = post.Image.data;
+                console.log('This is image for commenting page:',imageData);
+                post.imageURL = 'data:image/jpg;base64,' + Buffer.from(imageData, 'binary').toString('base64')
 
                 res.render("single-post", { post });
             } else {
