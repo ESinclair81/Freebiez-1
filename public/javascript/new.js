@@ -11,6 +11,9 @@ const newFormHandler = async function (event) {
     if (!file) {
         alert('Must upload an image!')
     }
+    else if (title.length < 10) {
+        alert('Title of post must be longer than 10 characters')
+    }
     else {
         const formData = new FormData()
         formData.append('file', file);
@@ -28,6 +31,7 @@ const newFormHandler = async function (event) {
 
         document.location.replace("/dashboard");
     }
+        
 };
 
 document.querySelector("#new-post-form").addEventListener("submit", newFormHandler);
