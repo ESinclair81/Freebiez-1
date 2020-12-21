@@ -4,6 +4,21 @@
   ## Description:
   This is a site where registerd users can post about goods they no longer need or want but that may be useful to someone else. It's GOOD to be GOOD!
 
+  ## Collaborators
+  Eon Sinclair
+  Shama Khan
+
+  ## Technologies
+  - HTML
+  - CSS
+  - NODE
+  - Express
+  - Sequelize
+  - BCrypt
+  - Multer
+  - express-handlebars
+  - MySQL
+
 
 
   ## Table of contents:
