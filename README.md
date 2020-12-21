@@ -2,7 +2,7 @@
   ![GitHub license](https://img.shields.io/badge/license-GPL_3.0-blue.svg)
 
   ## Description:
-  This is a site where registerd users can post about goods they no longer need or want but that may be useful to someone else. It's GOOD to be GOOD!
+  This is a site where registered users can post about goods they no longer need or want but that may be useful to someone else. It's GOOD to be GOOD!
 
   ## Collaborators
   - Eon Sinclair
