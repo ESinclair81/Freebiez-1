@@ -73,8 +73,9 @@ input {
     margin-bottom: 20px;
     margin-left: 15px;
     padding: 20px;
-    background-color:  rgb(194, 194, 194);
+    background-color:   rgba(165, 154, 100, 0.61);
     border-radius: 10px;
+    color: rgb(255, 255, 255);
 }
 
 .comment:nth-child(even) {
@@ -83,7 +84,8 @@ input {
 
 h2, h3 {
     font-size: 20px;
-    color: rgb(141, 196, 245);
+    /* color: rgba(20, 127, 221, 0.808); */
+    color: white;
     margin: 30px o;
     text-align: right;
     
@@ -137,6 +139,7 @@ p {
     margin-right: 12px;
     margin-left: 5px;
     padding: 2px;
+    color: white;
 
 }
 
@@ -181,7 +184,7 @@ textarea {
 .card-header {
     border-radius: 5px;
     margin-bottom: 5px;
-    background-color: rgb(151, 148, 133);
+    background-color: rgba(148, 135, 71, 0.61);
 }
 
 .card-title {
@@ -249,7 +252,7 @@ footer {
 }
 
 
-/*_______________________________________________________________ The Bee ________________________________________________________________*/
+/*_______________________________________________________________ The FreeBee ________________________________________________________________*/
 
 .bee{
 	margin-top:100px;
