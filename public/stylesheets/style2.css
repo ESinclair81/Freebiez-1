@@ -139,10 +139,10 @@ p {
 }
 
 .form-label {
-    margin-right: 12px;
+    margin-right: 15px;
     margin-left: 5px;
     padding: 2px;
-    color: rgba(255, 255, 255, 0.753);
+    color: rgba(58, 57, 57, 0.753);
 }
 
 .form-input {
