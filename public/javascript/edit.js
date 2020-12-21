@@ -7,15 +7,14 @@ const editFormHandler = async function (event) {
     // get form values for POST to endpoint
     const title = document.querySelector('#post-title').value;
     // const image = document.querySelector('#post-image').files;
-    const body = document.querySelector('#post-text').value;
-    // console.log('THis is the body:', body);
+    const text = document.querySelector('#post-text').value;
 
     // send update request to endpoint
     await fetch(`/api/post/${postId}`, {
         method: 'PUT',
         body: JSON.stringify({
             title,
-            body
+            text
         }),
         headers: {
             'Content-Type': 'application/json'
