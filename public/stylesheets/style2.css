@@ -3,19 +3,20 @@
 
 #logo {
     margin-right: 20px;
-    color: rgb(204, 198, 119);
+    color: rgba(226, 205, 10, 0.521);
     font-size: 45px;
     font-family: 'Expletus Sans', cursive;
-    text-shadow: 2px 2px #000000;
+    text-shadow: 2px 2px #00000073;
 
 }
 
 #logo2 {
     margin-right: 20px;
     margin-top: 14px;
-    color: rgb(204, 198, 119);
+    color: rgba(226, 204, 10, 0.952);
     font-size: 20px;
     font-family: 'Expletus Sans', cursive;
+    text-shadow: 1px 1px #00000073;
 
 }
 body {
@@ -42,7 +43,7 @@ nav {
 
 nav a {
     padding: 10px;
-    color: rgb(141, 196, 245);
+    color: rgba(20, 127, 221, 0.603);
 }
 
 .nav-wrapper {
@@ -197,7 +198,7 @@ textarea {
     background-color: rgba(255, 255, 255, 0.671);
 }
 
-.post-images {
+.post-image {
     /* max-width: 100%;
     height: 5px; */
     width: 100%;
@@ -219,7 +220,7 @@ textarea {
 
 footer {
 
-    height:80px; 
+    height: 60px; 
     width: 100%;
     background-image: none;
     background-repeat: repeat;
@@ -229,7 +230,8 @@ footer {
     bottom: 0pt;
     left: 0pt;
     background-color:  rgba(255, 255, 255, 0.671);
-    color: rgb(151, 148, 133);
+    color: rgba(226, 205, 10, 0.521);
+    text-shadow: 1px 1px #00000073;
     font-family: 'Expletus Sans', cursive;
 
 }   
