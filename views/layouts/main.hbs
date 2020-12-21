@@ -5,13 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
     <title>Freebiez - Give It Away Now</title>
-    {{!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> --}}
     <title>Freebiez - Home</title>
     <link rel="shortcut icon" type="image/png" href="../../public/images/favicon-Bee-Social.png">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
-    {{!_______________________________________________________ These are the Google Fonts
-    ____________________________________________________}}
+
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link
         href="https://fonts.googleapis.com/css2?family=Expletus+Sans:ital,wght@0,400;1,400;1,600;1,700&family=Merriweather:wght@400;700&display=swap"
@@ -21,29 +18,19 @@
 </head>
 
 <body>
-
-    {{!_____________________________________________________This Is the Auto Music on Load
-    ___________________________________________________!}}
-
-    <audio src="/public/Give It Away Sample.mp3" autoplay>
-        <p>If you are reading this, it is because your browser does not support the audio element.</p>
-        <embed src="/public/Give It Away Sample.mp3" width="180" height="90" hidden="true" />
-    </audio>
+    
+    <audio src="/public/Give_It_Away_Sample.mp3" autoplay="autoplay" loop="loop"></audio>
 
     <nav class="navbar navbar-expand-md">
         <h3 id="logo">Freebiez</h3>
         <h5 id="logo2">Give it away, give it away, give it away NOW</h5>
 
-        {{!_________________________________________________________ The Animated Bee
-        ___________________________________________________________!}}
         <div class="bee">
             <img src="/images/beebody.png" class="bee-body" />
             <img src="/images/beewing-left.png" class="bee-wing-left" />
             <img src="/images/beewing-right.png" class="bee-wing-right" />
         </div>
 
-        {{!!__________________________________________________________ This Is the NavBar
-        ______________________________________________________!}}
         <ul class="navbar-nav ml-auto">
             <li class="nav-item"><a href="/">Home</a></li>
             <li class="nav-item"><a href="/dashboard">Dashboard</a></li>
@@ -56,8 +43,6 @@
         {{{body}}}
     </main>
 
-    {{!_______________________________________________________ This is The Footer
-    ___________________________________________________________!}}
     <div class="footer">
         <footer class="flex-row justify-center footer_contents">
             &copy; Freebiez Inc
