@@ -151,7 +151,7 @@ p {
 }
 
 textarea {
-    width: 300px;
+    width: 90%;
     height: 75px;
   }
 
@@ -205,6 +205,7 @@ textarea {
     height: 15vw;
     object-fit: cover;
 }
+
 .list-group a {
     margin-left: 10px;
     padding: 10px;
@@ -220,7 +221,7 @@ textarea {
 
 footer {
 
-    height: 60px; 
+    height: 5%; 
     width: 100%;
     background-image: none;
     background-repeat: repeat;
