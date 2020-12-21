@@ -17,8 +17,9 @@
     {{#if post.Comments}}
     <section>
         <div>
-            <h2>Comments:</h2>
+            <h4>Comments:</h4>
         </div>
+        <br>
 
         <div>
             {{#each post.Comments}}
@@ -41,8 +42,8 @@
         </div>
         <div class="card-body">
             <input type="hidden" id="post-id" name="post-id" value="{{post.id}}" />
-            {{!-- <label class="form-label" for="comment-body">Comment</label> --}}
-            <textarea id="comment-text" name="comment-body" class="form-input"></textarea>
+            <textarea id="comment-text" name="comment-body" class="form-input-2"></textarea>
+            <br>
             <button type="submit" class="btn">Submit</button>
         </div>
     </form>
