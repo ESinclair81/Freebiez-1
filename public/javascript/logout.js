@@ -4,7 +4,7 @@ function logout() {
         method: "POST",
         headers: { "Content-Type": "application/json" }
     }).then(function () {
-        document.location.replace("/");
+        document.location.replace('/login');
     }).catch(err => console.log(err));
 }
 

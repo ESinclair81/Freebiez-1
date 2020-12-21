@@ -63,10 +63,9 @@ input {
 }
 
 .comment {
-    margin-bottom: 20px;
-    margin-left: 15px;
-    padding: 20px;
-    background-color: rgba(165, 154, 100, 0.61);
+    margin-bottom: 10px;
+    padding: 5px;
+    background-color:   rgba(165, 154, 100, 0.61);
     border-radius: 10px;
     color: rgb(255, 255, 255);
     width: 80%;
@@ -166,7 +165,14 @@ p {
 textarea {
     width: 500px;
     height: 75px;
-}
+    
+  }
+
+  .textarea-2 {
+    width: 65%;
+    height: 75px;
+    
+  }
 
 .column {
     display: flex;
@@ -182,9 +188,11 @@ textarea {
     align-content: space-between;
     width: 80%;
     padding: 10px;
-    margin: 20px 160px;
-    float: none;
-    /* margin-bottom: 5px; */
+    margin: 0 auto; 
+    float: none; 
+    margin-bottom: 12px; 
+    margin-top: 12px;
+ 
 }
 
 .card-body {
@@ -213,9 +221,17 @@ textarea {
 }
 
 .post-image {
-    max-width: 600px;
-    max-height: 600px;
-    object-fit: contain;
+    max-width: 100%;
+    height: 75%;
+}
+
+.post-card-title{
+    font-size: 18px;
+    color: rgba(148, 135, 71, 0.801);
+    margin-left: 30x;
+    margin-right: 80%;
+    padding: 5px;
+    
 }
 
 .list-group a {
@@ -244,22 +260,20 @@ footer {
 }
 
 .footer_contents {
-    height: 50p x;
-    width: 100%;
-    /* Visible width of footer */
+
+    height: 50p x; 
+    width: 100%; 
     padding: 7px;
     margin: auto;
     font-family: 'Expletus Sans', cursive;
     font-size: 15px;
 }
 
-/*_______________________________________________________________ The FreeBee ________________________________________________________________*/
-
-.bee {
-    margin-top: 100px;
-    position: relative;
-    animation: ani-bee 10s ease infinite;
-    transform-origin: 0% 0%;
+.bee{
+	margin-top:100px;
+	position:relative;
+	animation: ani-bee 10s ease infinite;
+	transform-origin: 0% 0%;
 }
 
 .bee-wing-left, .bee-wing-right, .bee-body {
@@ -305,17 +319,8 @@ footer {
 }
 
 @keyframes ani-bee {
-    0% {
-        left: 50px;
-        transform: rotate(30deg);
-    }
-    50% {
-        left: 300px;
-        transform: rotate(-360deg);
-    }
-    100% {
-        left: 50px;
-        transform: rotate(30deg);
-    }
+	0%{ left:50px;transform: rotate(30deg);}
+	50% {left:300px;transform: rotate(-360deg);}
+	100% {left:50px;transform: rotate(30deg);}
 }
 
