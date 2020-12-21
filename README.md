@@ -64,7 +64,7 @@
 
 
   ## Image:
-  [Freebiez screenshot](/images/freebiez_ss.png "Freebiez screenshot")
+  ![Freebiez screenshot](/images/freebiez_ss.png "Freebiez screenshot")
 
 
   ## Contributing:
