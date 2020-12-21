@@ -60,11 +60,11 @@
 
 
   ## URL:
-  N/A
+  https://fr33bi3z.herokuapp.com/login
 
 
   ## Image:
-  N/A
+  [Freebiez screenshot](/images/freebiez_ss.png "Freebiez screenshot")
 
 
   ## Contributing:
